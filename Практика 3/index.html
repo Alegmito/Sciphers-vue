@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Информационная безопасность</title>
+    <script src='script.js' defer></script>
+</head>
+<body>
+    <fieldset id='pleifer'>
+        <legend>Шифр Плейфера</legend>
+        <p>
+            <label>Кодовое слово</label>
+            <input type='text' id='code' value='пано' onchange="codeChanged('pleifer')">
+        </p>
+        <p>
+            <label>Исходный текст</label>
+            <input type='text' id='source'  value='Геоинформационная система это система сбора хранения анализа и графической визуализации пространственных данных и связанной с ними информации о необходимых объектах'>
+        </p>
+        
+        <p>
+            <label>Зашифрованный текст</label>
+            <textarea id='encrypted' disabled='true'  cols="30" rows="10"></textarea>
+        </p>
+        <button onclick='encryptTextPleifer()'>Зашифровать</button>
+        
+        <p>
+            <label>Расшифрованный текст</label>
+            <textarea name='decrypted' id='decrypted' cols="30" rows="10" disabled='true'></textarea>
+        </p>
+        <button onclick='decryptTextPleifer()'>Расшифровать</button>
+    </fieldset>
+
+    <fieldset id='polibius'>
+        <legend>Шифр Полибия</legend>
+        <p>
+            <label>Кодовое слово</label>
+            <input type='text' class='polibius-code' value='руно' onchange="codeChanged('polibius')">
+        </p>
+        <p>
+            <label>Исходный текст</label>
+            <input type='text' class='polibius-source'  value='Фотография'>
+        </p>
+        
+        <p>
+            <label>Зашифрованный текст</label>
+            <textarea class='polibius-encrypted' disabled='true'  cols="30" rows="10"></textarea>
+        </p>
+        <button onclick='encryptTextPolibius()'>Зашифровать</button>
+        
+        <p>
+            <label>Расшифрованный текст</label>
+            <textarea name='decrypted' class='polibius-decrypted' cols="30" rows="10" disabled='true'></textarea>
+        </p>
+        <button onclick='decryptTextPolibius()'>Расшифровать</button>
+    </fieldset>
+
+</body>
+</html>
